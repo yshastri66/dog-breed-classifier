@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+ <br>
+ <h4 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:deepskyblue; margin-left: 2em; font-size: 30px;"><b> Click on 'Choose File' and choose your dog image. Then hit 'Predict' to identify your Dog Breed</b></h4>
+ <br><br>   
+ <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                
+                <img src="{{url_for('static',filename=p)}}" alt="Dog" width="300" height="300" style="border: 8px solid black; margin-left: 2.5em;">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <div class="input-group mt-3 row">
+                        <input type="file" class="btn btn-primary" name="image" accept="image/x-png,image/jpeg" required class="validate" id="file" onchange="Filevalidation()">
+                        <button type="submit" class="btn btn-success" id="submit">Predict</button>
+                    </div>
+                </form>
+            </div>
+
+            {% if pred!="" %}
+            <div class="col-md-6">
+                
+                <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:floralwhite; "><b> I'm  <span style="color: red;"> {{pred[0][1]}}% </span> sure that it is <br><span style="color:paleturquoise ;
+                text-align: center   ;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 30px;">'{{ pred[0][0]}}'</span></b></h4>
+            
+            {% if pred[0][1] < 99 %}
+            <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:greenyellow">If I'm Wrong check whether I had predicted <br>it in my top 5 predictions :</h4>
+                    {% for dog,predict in pred[1:] %}
+                        <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:mediumblue; margin-top: 0.5 em;"><b> I think only <span style="color: red;">{{predict}}% </span>that, it is <br><span style="color:darkred;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 30px;">'{{dog }}'</span></b></h4>
+                    {% endfor %}
+            {% endif %}
+            
+            </div>
+
+            {% endif %}
+        </div>
+    </div>
+    <br>
+    <br>
+<script> 
+    Filevalidation = () => { 
+        const fi = document.getElementById('file'); 
+        // Check if any file is selected.
+        const final = document.getElementById('submit');
+        
+        if (fi.files.length > 0) { 
+            for (const i = 0; i <= fi.files.length - 1; i++) { 
+  
+                const fsize = fi.files.item(i).size; 
+                const file = Math.round((fsize / 1024)); 
+                // The size of the file. 
+                if (file >= 1024) { 
+                    alert("File too Big, please select a image less than 1mb ");
+                    final.disabled = true;
+                }
+                else{
+                    final.disabled = false;
+                }
+            } 
+        }
+    } 
+</script>
+{% endblock bodyblock %}
+
