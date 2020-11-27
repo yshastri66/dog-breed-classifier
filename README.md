@@ -13,3 +13,23 @@ This is a project which detects 30 different dog breeds.
   <li> Here I used <b>Inception v3</b> model as my base model for feature extraction </li>
   <li> I got training accuracy reaching <b>99%</b> with testing accuracy of <b>94%.</b></li>
 </ul>
+<br>
+
+#### Detailed training is explained in final_building_model.ipynb file.
+<br>
+#### Trained model is available in my drive with <a href="https://drive.google.com/drive/folders/1RE_mwLyMT_rVyvokb5OPnHKOQXRWvZu5?usp=sharing">this link</a>
+<br>
+#### I had deployed this model with python and having Flask as my backend and gunicorn as server.
+<br>
+#### Snapshot of the website Front page and Breed page where name of breeds which model can predict are mentioned.
+<br>
+<div>
+<img src="https://github.com/yshastri66/dog-breed-classifier/blob/main/static/website%20photos/Screenshot%20from%202020-11-27%2018-26-14.png" alt="homepage" width="475" height="500">
+<img src="https://github.com/yshastri66/dog-breed-classifier/blob/main/static/website%20photos/Screenshot%20from%202020-11-27%2018-26-18.png" alt="homepage" width="475" height="500">
+</div>
+<br>
+#### This is the prediction page before uploading and after uploading and getting predictions:-<br>
+<div>
+  <img src="https://github.com/yshastri66/dog-breed-classifier/blob/main/static/website%20photos/Screenshot%20from%202020-11-27%2018-26-28.png" alt="homepage" width="475" height="500">
+  <img src="https://github.com/yshastri66/dog-breed-classifier/blob/main/static/website%20photos/Screenshot%20from%202020-11-27%2018-26-49.png" alt="homepage" width="475" height="500">
+</div>
