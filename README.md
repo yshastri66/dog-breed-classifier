@@ -17,7 +17,7 @@ This is a project which detects 30 different dog breeds.
 
 <h3><b>Visit my dog-breed-classification website with <a href ="https://dog-breeds-detector.herokuapp.com/"> This link </a>.</b></h3>
 <h3> Detailed training is explained in final_building_model.ipynb file. </h3>
-<h4>Trained model is available in my drive with <a href="https://drive.google.com/drive/folders/1RE_mwLyMT_rVyvokb5OPnHKOQXRWvZu5?usp=sharing">this link</a></h4>
+<h4>Trained model 'smart_mdoel_mobile.h5' is available in my drive with <a href="https://drive.google.com/drive/folders/1RE_mwLyMT_rVyvokb5OPnHKOQXRWvZu5?usp=sharing">this link</a></h4>
 
 <h4> I had deployed this model with python and having 'Flask' as my backend and 'gunicorn' as server.</h4>
 
