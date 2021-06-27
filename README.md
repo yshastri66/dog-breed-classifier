@@ -33,5 +33,5 @@ This is a project which detects 30 different dog breeds.
   <img src="https://github.com/yshastri66/dog-breed-classifier/blob/main/static/website%20photos/Screenshot%20from%202020-11-27%2018-26-49.png" alt="homepage" width="800" height="450">
 
 #### Feel free to contact me incase on any quaries
-### Yashodhara Shastri G
-#### yashodharashastri6@gmail.com
+<h4> Yashodhara Shastri G<br>
+E-mail : yashodharashastri6@gmail.com</h4>
